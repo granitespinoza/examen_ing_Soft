@@ -15,6 +15,7 @@ public class GradeCalculator {
     
     private static final double TOTAL_WEIGHT_PERCENTAGE = 100.0;
     private static final double TOLERANCE = 0.01; // Tolerancia para comparación de pesos
+    private static final long MAX_CALCULATION_TIME_MS = 300; // RNF04: Tiempo máximo de cálculo en milisegundos
     
     /**
      * Calcula el promedio ponderado de las evaluaciones.
@@ -73,7 +74,7 @@ public class GradeCalculator {
         long calculationTime = System.currentTimeMillis() - startTime;
         
         // RNF04: Validar tiempo de cálculo
-        if (calculationTime >= 300) {
+        if (calculationTime >= MAX_CALCULATION_TIME_MS) {
             throw new RuntimeException(
                 String.format("El cálculo excedió el tiempo máximo permitido: %d ms", calculationTime)
             );
