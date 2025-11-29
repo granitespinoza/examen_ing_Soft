@@ -2,6 +2,15 @@
 
 Sistema backend para calcular notas finales de estudiantes considerando evaluaciones, asistencia y puntos extra.
 
+
+## Resultados de calidad y análisis SonarQube
+
+### Calidad requerida
+![Calidad requerida](quality.png)
+
+### Resultado del alumno en SonarQube
+![Resultado SonarQube](sonnar.png)
+
 ## 📋 Descripción
 
 Este proyecto implementa un sistema completo de cálculo de notas finales según los requerimientos funcionales (RF) y no funcionales (RNF) especificados. El sistema permite:
